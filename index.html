@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF Audiobook</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+  <script>
+    // Especificar a localização do script do worker do PDF.js
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.min.js';
+  </script>
+</head>
+<body>
+  <input type="file" id="pdfInput">
+  <button id="playButton">Reproduzir</button>
+  <button id="pauseButton">Pausar</button>
+  <button id="resumeButton">Retomar</button>
+  <button id="forwardButton">Avançar</button> <!-- Botão para avançar -->
+  <button id="backwardButton">Retroceder</button> <!-- Botão para retroceder -->
+  <div id="pdfContainer"></div>
+  <div id="textoPDF"></div>
+  <audio id="audioPlayer" controls></audio>
+  <script src="script.js"></script>
+</body>
+</html>
